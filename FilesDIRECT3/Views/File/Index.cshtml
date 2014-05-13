@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Scripts.Render("~/bundles/filemanager")
+
+
+
+<fieldset>
+    <legend>SmartFile Uploader</legend>
+    <div id="smartFileUploder"></div>
+</fieldset>
+
+@Html.Hidden("uploadUrl", Url.Action("Upload", "File"))
+@Html.Hidden("pulploadSwf", Url.Content("~/Scripts/Moxie.swf"))
+@Html.Hidden("pulploadXap", Url.Content("~/Scripts/Moxie.xap"))
